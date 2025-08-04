@@ -1,13 +1,31 @@
 #dsajourney-MV
-#Using in-built function
+#Without in-built and less space
 class Solution(object):
     def isPalindrome(self, s):
-        new_s = ""
-        for c in s:
-            if c.isalnum():
-                new_s += c.lower()
-        return new_s == new_s[::-1]
+        l = 0
+        r = len(s) - 1
+        while l < r:
+            while l < r and not self.alphanum(s[l]):
+                l += 1
+            while r > l and not self.alphanum(s[r]):
+                r -= 1
+            if s[l].lower() != s[r].lower():
+                return False
+            l += 1
+            r -= 1
+        return True
+            
+    def alphanum(self, c):
+        return (("a" <= c.lower() <= "z") or ("0" <= c <= "9"))
 
+#Using in-built function
+# class Solution(object):
+#     def isPalindrome(self, s):
+#         new_s = ""
+#         for c in s:
+#             if c.isalnum():
+#                 new_s += c.lower()
+#         return new_s == new_s[::-1]
 
 
 #First approach
