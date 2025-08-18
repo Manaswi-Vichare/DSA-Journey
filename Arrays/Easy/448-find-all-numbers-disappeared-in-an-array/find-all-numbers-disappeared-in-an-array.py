@@ -11,3 +11,9 @@ class Solution(object):
             if nums[i] != i + 1:
                 res.append(i + 1)
         return res
+
+#Another solution
+class Solution(object):
+    def findDisappearedNumbers(self, nums):
+        a=set(nums)
+        return [i for i in range(1, len(nums)+1) if i not in a]
