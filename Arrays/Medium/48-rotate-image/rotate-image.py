@@ -1,4 +1,5 @@
 #dsajourney-MV
+#TC: O(N^2); SC: O(1)
 class Solution(object):
     def rotate(self, matrix):
         n = len(matrix)
