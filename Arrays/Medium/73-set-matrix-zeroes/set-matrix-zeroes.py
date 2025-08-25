@@ -1,4 +1,5 @@
 #dsajourney-MV
+#TC: O(M*N); SC: O(M+N)
 class Solution(object):
     def setZeroes(self, matrix):
         m = len(matrix)
