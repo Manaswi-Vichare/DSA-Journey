@@ -1,4 +1,5 @@
 #dsajourney-MV
+#TC: O(N); SC:O(1)
 import math
 class Solution(object):
     def areaOfMaxDiagonal(self, dimensions):
